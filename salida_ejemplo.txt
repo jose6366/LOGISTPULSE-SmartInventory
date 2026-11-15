@@ -1,0 +1,22 @@
+FEFO eligio: L2
+APROBADO: RESERVAR
+DUPLICADO: no se ejecuto nuevamente
+RECHAZADO: Stock insuficiente
+APROBADO: LIBERAR
+APROBADO: TRANSFERIR
+APROBADO: AJUSTAR
+EOQ: Recomendacion[estrategia=EOQ, indicador=Cantidad optima de pedido (unidades), valor=600.0, decision=Lote economico sugerido: 600.0 unidades]
+ROP: Recomendacion[estrategia=Punto de reorden, indicador=Umbral de reorden (unidades), valor=230.0, decision=Emitir pedido]
+Min-Max: Recomendacion[estrategia=Min-Max, indicador=Cantidad a pedir (unidades), valor=320.0, decision=Emitir pedido]
+State: RECIBIDO
+State final: ENVIADO, existencias: 0
+Observer: eventos de Ledger = 5
+Observer: eventos de PULSEFLEET = 5
+Observer: avisos de reposicion = [Revisar reposicion de SKU001 en QUITO, Revisar reposicion de SKU001 en GUAYAQUIL]
+Auditoria:
+Registro[fecha=2026-11-12T19:07:01.800762197Z, id=op1, actor=ana, tipoActor=HUMANO, accion=RESERVAR, resultado=APROBADO, detalle=Operacion realizada]
+Registro[fecha=2026-11-12T19:07:01.831761471Z, id=op1, actor=ana, tipoActor=HUMANO, accion=RESERVAR, resultado=DUPLICADO, detalle=Sin volver a modificar stock]
+Registro[fecha=2026-11-12T19:07:01.832109765Z, id=op2, actor=agente-reposicion, tipoActor=IA, accion=AJUSTAR, resultado=RECHAZADO, detalle=Stock insuficiente]
+Registro[fecha=2026-11-12T19:07:01.832312260Z, id=op3, actor=ana, tipoActor=HUMANO, accion=LIBERAR, resultado=APROBADO, detalle=Operacion realizada]
+Registro[fecha=2026-11-12T19:07:01.833287127Z, id=op4, actor=agente-logistica, tipoActor=IA, accion=TRANSFERIR, resultado=APROBADO, detalle=Operacion realizada]
+Registro[fecha=2026-11-12T19:07:01.833439487Z, id=op5, actor=ana, tipoActor=HUMANO, accion=AJUSTAR, resultado=APROBADO, detalle=Operacion realizada]
